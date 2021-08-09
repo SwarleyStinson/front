@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>App</title>
+    <meta charset="UTF-8">
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/webjars/jquery/jquery.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+    <link th:href="@{/css/sse.css}" rel="stylesheet"/>
+    <script th:src="@{/js/gracefully.js}"></script>
+</head>
+
+<body>
+<h2>Gracefully shutdown checking</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-4">
+            <button class="sse-mvc btn btn-success" type="button" th:onclick="doWork()">Starting do work!</button>
+        </div>
+        <div class="col-6">
+            <input class="gracefully-work"/>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

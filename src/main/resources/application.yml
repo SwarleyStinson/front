@@ -4,6 +4,12 @@ spring:
     cache: false
     prefix: classpath:/templates/
     suffix: .html
+  lifecycle:
+    timeout-per-shutdown-phase: 2m
 
-logging.level.root: ERROR
+logging.level.root: INFO
 logging.level.ru.stepanov: DEBUG
+
+server:
+  port: 8080
+  shutdown: graceful

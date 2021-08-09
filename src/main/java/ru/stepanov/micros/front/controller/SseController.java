@@ -27,7 +27,7 @@ public class SseController {
 
     HashMap<String, SseEmitter> notificationCache = new HashMap<>();
 
-    @GetMapping("/")
+    @GetMapping("/sse")
     public String home(Model model) {
         return "sse";
     }
