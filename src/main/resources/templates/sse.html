@@ -1,0 +1,69 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>App</title>
+    <meta charset="UTF-8">
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/webjars/jquery/jquery.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+    <link th:href="@{/css/sse.css}" rel="stylesheet"/>
+    <script th:src="@{/js/sse.js}"></script>
+</head>
+
+<body>
+<h2>Server-Sent events</h2>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-4">
+            <button class="sse-mvc btn btn-success" type="button" th:onclick="sendSseRequest()">Заказать SseEmitter!
+            </button>
+        </div>
+        <div class="col-6">
+            <input class="sse-mvc"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <button class="sse-flux btn btn-secondary" type="button" th:onclick="sendSseFluxRequest()">
+                Заказать Flux&lt;ServerSentEvents&gt;!
+            </button>
+        </div>
+        <div class="col-6">
+            <input class="sse-flux"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <button class="flux btn btn-secondary" type="button" th:onclick="sendFluxRequest()">Заказать Flux&lt;String&gt;!</button>
+        </div>
+        <div class="col-6">
+            <input class="flux"/>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 40px">
+        <div class="col-6" align="right">
+            <button class="flux btn btn-info" type="button" th:onclick="createEvents()">Create events</button>
+        </div>
+        <div class="col-2" align="center">
+            <button class="flux btn btn-warning" type="button" th:onclick="getEvents()">Request events</button>
+        </div>
+        <div class="col-4" align="left">
+            <button class="flux btn btn-danger" type="button" th:onclick="sendEvents()">Send events and invalidate cache</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <textarea class="list" disabled="yes"></textarea>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

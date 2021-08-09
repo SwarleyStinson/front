@@ -1,0 +1,9 @@
+spring:
+  thymeleaf:
+    enabled: true
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+
+logging.level.root: ERROR
+logging.level.ru.stepanov: DEBUG
